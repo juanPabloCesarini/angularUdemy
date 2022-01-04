@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  descripcion = "Esto es un video de event binding";
   title = 'holamundo';
   nombre = "Juan";
   textoPlaceholder = "Escribí tu nombre";
@@ -20,5 +21,8 @@ export class AppComponent {
 
   getSuma(num1: number, num2: number) {
     return num1 + num2;
+  }
+  cambiarDescripcion(): void{
+    this.descripcion = "En en próximo video se verá two way binding";
   }
 }
