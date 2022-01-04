@@ -1,1 +1,20 @@
-<h1 class="display-">HOLA MUNDO</h1>g
+<h1 class="display-">HOLA MUNDO</h1>
+
+<hr>
+<h4>DATABINDING</h4>
+<div class="container mt-4">
+  <div class="row">
+    <h3>Mi nombre es {{nombre}}</h3> <!-- interpolación -->
+    <h3>La suma de 2 + 2 = {{ 2 + 2}}</h3> <!-- otro ejemplo -->
+    <h3>La suma de 5 + 2 = {{ getSuma(5,2)}}</h3> <!-- otro ejemplo -->
+  </div>
+</div>
+<br>
+<h4>PROPERTY BINDING</h4>
+<div class="container m-4">
+  <div class="row">
+    <input type="text" class="form-control" [placeholder]=textoPlaceholder [disabled]=deshabilitado>
+  </div>
+  <br>
+  <img [src]="imgSrc" alt="imagen" width="400px" height="400px">
+</div>
