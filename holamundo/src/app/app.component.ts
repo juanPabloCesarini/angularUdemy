@@ -14,6 +14,18 @@ export class AppComponent {
   deshabilitado = true;
   imgSrc = "https://cdn2.civitatis.com/argentina/mar-del-plata/galeria/big/lobos-marinos-mar-plata.jpg";
   twoWayBinding = "";
+  listado: any[] = [
+    {
+      nombre: "Juan Pablo Cesarini", estado: "Aprobado"
+    },
+    {
+      nombre: "Juan Pablo Romano", estado: "Aprobado"
+    },
+    {
+      nombre: "Sebastián Grillo", estado: "Aprobado"
+    }
+  ]
+  mostrar = true;
 
   constructor() {
     setInterval(() => this.nombre = 'Pablo', 3000);
@@ -25,5 +37,8 @@ export class AppComponent {
   }
   cambiarDescripcion(): void{
     this.descripcion = "En en próximo video se verá two way binding";
+  }
+  toogle(): void{
+    this.mostrar = !this.mostrar;
   }
 }
