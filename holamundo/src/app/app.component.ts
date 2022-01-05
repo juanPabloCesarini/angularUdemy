@@ -13,6 +13,7 @@ export class AppComponent {
   textoPlaceholder = "Escribí tu nombre";
   deshabilitado = true;
   imgSrc = "https://cdn2.civitatis.com/argentina/mar-del-plata/galeria/big/lobos-marinos-mar-plata.jpg";
+  twoWayBinding = "";
 
   constructor() {
     setInterval(() => this.nombre = 'Pablo', 3000);
