@@ -19,7 +19,7 @@ export class AppComponent {
       nombre: "Juan Pablo Cesarini", estado: "Aprobado"
     },
     {
-      nombre: "Juan Pablo Romano", estado: "Aprobado"
+      nombre: "Juan Pablo Romano", estado: "Promocionado"
     },
     {
       nombre: "Sebastián Grillo", estado: "Aprobado"

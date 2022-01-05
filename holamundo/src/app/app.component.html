@@ -58,7 +58,7 @@
         <tr *ngFor="let list of listado; let i = index">
           <td>{{i+1}}</td>
           <td>{{list.nombre}}</td>
-          <td>{{list.estado}}</td>
+          <td [ngStyle]="{'font-style': list.estado==='Promocionado' ? 'italic' : 'normal' }">{{list.estado}}</td>
         </tr>
       </tbody>
   </table>
