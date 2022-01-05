@@ -55,8 +55,10 @@
         <th>Estado</th>
       </thead>
       <tbody>
-        <tr *ngFor="let list of listado; let i = index">
-          <td>{{i+1}}</td>
+        <tr *ngFor="let list of listado; let i = index" [ngSwitch]="list.estado">
+          <td *ngSwitchCase="'Promocionado'" class="bg-success">{{i+1}}</td>
+          <td *ngSwitchCase="'Aprobado'" class="bg-warning">{{i+1}}</td>
+          <td *ngSwitchCase="'Libre'" class="bg-danger">{{i+1}}</td>
           <td [ngClass]="list.estado==='Promocionado' ? 'badge bg-success' : 'badge bg-warning'">{{list.nombre}}</td>
           <td [ngStyle]="{'font-style': list.estado==='Promocionado' ? 'italic' : 'normal' }">{{list.estado}}</td>
         </tr>

@@ -16,7 +16,7 @@ export class AppComponent {
   twoWayBinding = "";
   listado: any[] = [
     {
-      nombre: "Juan Pablo Cesarini", estado: "Aprobado"
+      nombre: "Juan Pablo Cesarini", estado: "Libre"
     },
     {
       nombre: "Juan Pablo Romano", estado: "Promocionado"
