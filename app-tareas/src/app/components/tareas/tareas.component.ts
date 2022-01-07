@@ -27,8 +27,12 @@ export class TareasComponent implements OnInit {
     this.nombreTarea = '';
   }
 
-  eliminarTarea(i:number) {
+  eliminarTarea(i:number):void {
     this.listTareas.splice(i, 1);
+  }
+
+  actualizarTarea(tarea: Tarea, i: number): void{
+    this.listTareas[i].estado = !tarea.estado;
   }
   ngOnInit(): void {
   }
