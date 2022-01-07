@@ -6,7 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./convertidor.component.css']
 })
 export class ConvertidorComponent implements OnInit {
-
+  cantidad: number = 0;
+  tengo: string = "u$s";
+  quiero: string = "EUR";
+  resultado: number = 0;
+  monedas: string[] = ['u$s', 'EUR', '£'];
   constructor() { }
 
   ngOnInit(): void {

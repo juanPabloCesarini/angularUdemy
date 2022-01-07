@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ConvertidorComponent } from './components/convertidor/convertidor.component';
+
 
 @NgModule({
   declarations: [
@@ -12,7 +14,8 @@ import { ConvertidorComponent } from './components/convertidor/convertidor.compo
     ConvertidorComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

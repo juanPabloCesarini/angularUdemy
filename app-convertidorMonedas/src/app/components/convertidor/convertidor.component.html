@@ -3,31 +3,27 @@
     <div class="col-lg-12">
       <div class="mb-3">
         <label for="cantidad" class="form-label">Ingrese cantidad</label>
-        <input type="number" class="form-control form-control-lg" id="cantidad" placeholder="Ingrese cantidad...">
+        <input [(ngModel)]="cantidad" type="number" class="form-control form-control-lg" id="cantidad" placeholder="Ingrese cantidad...">
       </div>
     </div>
   </div>
   <div class="row">
     <div class="col-lg-6">
-      <select class="form-select form-select-lg" aria-label="Default select example">
-        <option selected>Tengo</option>
-        <option value="1">U$D</option>
-        <option value="2">EUR</option>
-        <option value="3">LIBRA</option>
+      <label for="tengo" class="form-label">Tengo</label>
+      <select [(ngModel)]="tengo" class="form-select form-select-lg" aria-label="Default select example">
+        <option *ngFor="let moneda of monedas">{{moneda}}</option>
       </select>
     </div>
     <div class="col-lg-6">
-      <select class="form-select form-select-lg" aria-label="Default select example">
-        <option selected>Quiero</option>
-        <option value="1">U$D</option>
-        <option value="2">EUR</option>
-        <option value="3">LIBRA</option>
+      <label for="quiero" class="form-label">Quiero</label>
+      <select t [(ngModel)]="quiero" class="form-select form-select-lg" aria-label="Default select example">
+        <option *ngFor="let moneda of monedas">{{moneda}}</option>
       </select>
     </div>
     <h5 class="text-center mt-3">
-      <span class="badge bg-success">u$s 100</span>
+      <span class="badge bg-success">{{cantidad}} {{tengo}}</span>
       <span class="badge bg-secondary">son</span>
-      <span class="badge bg-success">30 EUR</span>
+      <span class="badge bg-success">{{resultado}} {{quiero}}</span>
     </h5>
   </div>
 </div>
