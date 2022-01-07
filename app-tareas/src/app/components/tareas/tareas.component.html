@@ -4,14 +4,14 @@
       <input [(ngModel)]='nombreTarea'(keyup.enter)="agregarTarea()" type="text" class ="form-control form-control-lg" placeholder="Ingrese una tarea">
     </div>
     <div class="col-lg-6 offset-lg-3 mt-3">
-      <div class="card p-2" *ngIf="listTareas.length===0">
+      <div class="card p-2 text-center" *ngIf="listTareas.length===0">
         <h6>No hay tareas para mostrar</h6>
       </div>
       <ul class="list-group ">
-        <li *ngFor="let tarea of listTareas" class="list-group-item d-flex justify-content-between">
+        <li *ngFor="let tarea of listTareas; let i = index;" class="list-group-item d-flex justify-content-between">
           <span class="cursor"><i class="far fa-circle"></i></span>
           {{tarea.nombre}}
-          <span class="cursor text-danger"><i class="fas fa-trash-alt"></i></span>
+          <span class="cursor text-danger"(click)="eliminarTarea(i)"><i class="fas fa-trash-alt"></i></span>
         </li>
       </ul>
     </div>

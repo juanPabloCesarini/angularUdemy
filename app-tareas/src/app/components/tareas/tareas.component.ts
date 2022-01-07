@@ -26,6 +26,10 @@ export class TareasComponent implements OnInit {
     // Se resetea el input
     this.nombreTarea = '';
   }
+
+  eliminarTarea(i:number) {
+    this.listTareas.splice(i, 1);
+  }
   ngOnInit(): void {
   }
 
