@@ -14,7 +14,7 @@ export class DashboardComponent implements OnInit {
   estado: string = '';
   query: boolean = false;
   loading: boolean = false;
-  status: number = 0;
+  error: number = 0;
 
   constructor(private _climaService:ClimaService) { }
 
@@ -30,8 +30,17 @@ export class DashboardComponent implements OnInit {
       this.humedad = data.main.humidity;
       this.temperatura = data.main.temp - 273;
       this.estado = data.weather[0].main;
-      this.status = data.status;
-      console.log(this.status);
+    }, error =>{
+      this.mje_error(error.error.cod);
     });
+  }
+  mje_error(e:number) {
+    this.loading = false;
+    this.error = e;
+    setTimeout(() => {
+      this.error = 0;
+      this.ciudad = '';
+    }, 3000);
+
   }
 }
