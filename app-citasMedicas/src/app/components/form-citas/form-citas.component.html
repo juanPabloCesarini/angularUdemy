@@ -1,1 +1,26 @@
-<p>form-citas works!</p>
+<div class="card bg-light">
+  <div class="card-body">
+    <h5 class="card-title text-center">Agregar Cita</h5>
+    <div *ngIf="formIncorrecto" class="tex-center">
+      <span class="badge bg-danger">Formulario Incompleto</span>
+    </div>
+
+    <div class="form-group mb-3">
+      <label for="nombre">Nombre</label>
+      <input [(ngModel)]="nombre" id="nombre" type="text" class="form-control" placeholder="Ingrese nombre del paciente...">
+    </div>
+    <div class="form-group mb-3">
+      <label for="fecha">Fecha</label>
+      <input  [(ngModel)]="fecha" id="fecha" type="date" class="form-control">
+    </div>
+      <div class="form-group mb-3">
+      <label for="hora">Hora</label>
+      <input  [(ngModel)]="hora" id="hora" type="time" class="form-control">
+    </div>
+    <div class="form-group mb-3">
+      <label for="sintomas">Síntomas</label>
+      <textarea  [(ngModel)]="sintomas" id="sintomas" rows="3" class="form-control" placeholder="Ingrese los síntomas..."></textarea>
+    </div>
+    <button (click)="agregarCita()"style="width: 100%;" class="btn btn-primary btn-block">Agregar</button>
+  </div>
+</div>
