@@ -14,3 +14,26 @@
     - ## npm cache clean --force
     - *Instalamos última versión*
     - ## npm install -g @angular/cli
+
+- # Como crear componentes
+    - ## ng g c carpeta/nombre
+
+- # Como crear servicios
+    - ## ng g s carpeta/nombre
+
+- # Para agregar bootstrap
+    - *instalamos el framwork*
+    - ## npm install bootstrap jquery @popperjs/core
+    - *modificar el archivo angular.json*
+        - **
+            "styles":[
+                "node_modules/bootstrap/dist/css/bootstrap.min.css",
+                "src/styles.scss"
+            ],
+        **
+        - **"scripts": [
+                "node_modules/jquery/dist/jquery.min.js",
+                "node_modules/@popperjs/core/dist/umd/popper.min.js",
+                "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
+        **
